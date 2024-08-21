@@ -1,2 +1,4 @@
-# LuoguShowDiscussID
-在讨论的右侧增加该讨论的ID
+# LuoguTampermonkeyScripts
+一些洛谷用油猴脚本
+
+ShowDiscussID:在讨论右侧显示该贴ID
