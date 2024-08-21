@@ -13,11 +13,13 @@
 // @match        http://www.luogu.com/discuss?*
 // @match        http://www.luogu.com/discuss
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=luogu.com.cn
+// @downloadURL  https://github.com/ZBRprogrammer/LuoguShowDiscussID/blob/main/ShowDisscussID.js
+// @updateURL    https://github.com/ZBRprogrammer/LuoguShowDiscussID/blob/main/ShowDisscussID.js
 // ==/UserScript==
 
 (function() {
     'use strict';
-    const delay = Math.random() * 2000+200; // 1µ½2ÃëÖ®¼äµÄËæ»úÑÓ³Ù
+    const delay = Math.random() * 2000+200; // 1åˆ°2ç§’ä¹‹é—´çš„éšæœºå»¶è¿Ÿ
     console.log("Show discuss ID loaded successfully");
     setTimeout(()=>{
         const discussList = document.querySelector("#app > div.main-container > main > div > section.main > div > div > div.border.block > div");
