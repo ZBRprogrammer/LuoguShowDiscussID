@@ -18,8 +18,8 @@
 // @match        https://www.luogu.com.cn/judgement
 // @match        http://www.luogu.com/judgement
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=luogu.com.cn
-// @downloadURL  https://update.greasyfork.org/scripts/471106/Atcoder%20Better%21.user.js
-// @updateURL    https://update.greasyfork.org/scripts/471106/Atcoder%20Better%21.meta.js
+// @downloadURL  https://github.com/ZBRprogrammer/LuoguTampermonkeyScripts/edit/main/Goto%20lglg.top.js
+// @updateURL    https://github.com/ZBRprogrammer/LuoguTampermonkeyScripts/edit/main/Goto%20lglg.top.js
 // ==/UserScript==
 
 (function() {
