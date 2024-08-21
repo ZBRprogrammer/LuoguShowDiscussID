@@ -8,6 +8,8 @@
 // @match        https://www.luogu.com/discuss/*
 // @match        http://www.luogu.com.cn/discuss/*
 // @match        http://www.luogu.com/discuss/*
+// @downloadURL  https://github.com/ZBRprogrammer/LuoguTampermonkeyScripts/edit/main/DeleteDiscussToLglg.top.js
+// @updateURL    https://github.com/ZBRprogrammer/LuoguTampermonkeyScripts/edit/main/DeleteDiscussToLglg.top.js
 // ==/UserScript==
 
 (function() {
