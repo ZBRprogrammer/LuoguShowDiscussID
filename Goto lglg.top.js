@@ -30,7 +30,7 @@
         // 获取当前页面的URL
     const url = window.location.href;
     const defaultButtonStyle = 'border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); background-color: rgb(52, 152, 219);';
-    function createButton(text, onClick, additionalStyle = '', dataAttributes = {}) {
+    function createButton(text, additionalStyle = '', dataAttributes = {}) {
         const button = document.createElement('button');
         button.textContent = text;
         // 设置用户传入的data属性
@@ -42,10 +42,25 @@
         button.setAttribute('solid', '');
         button.setAttribute('size', 'middle');
         button.style = `${defaultButtonStyle}; ${additionalStyle}`; // 合并样式
-        button.onclick = onClick;
         return button;
     }
-
+    function createA(text,href, additionalStyle = '',dataAttributes = {}){
+        const A = document.createElement('a');
+        A.href=href;
+        for (let key in dataAttributes) {
+            A.setAttribute(key, dataAttributes[key]);
+        }
+        A.style = `${additionalStyle}`;
+        const button = createButton(
+            text,'margin-right: 5px;', // 添加5px的右边距
+                {
+                    'data-v-cc52fb5c': '',
+                    'data-v-59a020e0': '',
+                    'data-v-f9624136': ''
+                })
+        A.appendChild(button);
+        return A;
+    }
     // 匹配 "/user/xxx#*" 模式的URL
     const userMatch = url.match(/\/user\/(\d+)(#.*)?$/);
     if (userMatch) {
@@ -53,19 +68,26 @@
         const buttonContainer = document.querySelector('div.user-action');
 
         if (buttonContainer) {
-            const button = createButton(
+            const A1 = createA(
                 'Goto lglg',
-                function() {
-                    window.location.href = `https://www.lglg.top/user/${userId}`;
-                },
-                'margin-right: 5px;', // 添加5px的右边距
+                `https://www.lglg.top/user/${userId}`,
+                "",
                 {
-                    'data-v-cc52fb5c': '',
-                    'data-v-59a020e0': '',
-                    'data-v-f9624136': ''
-                } // 用户传入的data属性
-            );
-            buttonContainer.insertBefore(button, buttonContainer.firstChild); // 插入到容器的最前端
+                    "data-v-0640126c":"",
+                    "data-v-59a020e0":"",
+                }
+            )
+            const A2 = createA(
+                'Goto benben',
+                `https://z.benben.sbs/user/${userId}/1`,
+                "",
+                {
+                    "data-v-0640126c":"",
+                    "data-v-59a020e0":"",
+                }
+            )
+            buttonContainer.insertBefore(A1, buttonContainer.firstChild); // 插入到容器的最前端
+            buttonContainer.insertBefore(A2, buttonContainer.firstChild); // 插入到容器的最前端
         }
     }
     // 匹配 "/discuss/xxx" 模式的URL
@@ -77,19 +99,16 @@
         const buttonContainer = document.querySelector(`#app > div.main-container > main > div > section.side > div > div > div:nth-child(${childNum})`);
 
         if (buttonContainer) {
-            const button = createButton(
+            const A = createA(
                 'Goto lglg',
-                function() {
-                    window.location.href = `https://www.lglg.top/${discussId}`;
-                },
-                '',
+                `https://www.lglg.top/${discussId}`,
+                "",
                 {
-                    'data-v-7ade990c':'',
-                    'data-v-70c65cc7':'',
-                    'data-v-8b7f80ba':''
+                    "data-v-0640126c":"",
+                    "data-v-59a020e0":"",
                 }
-            );
-            buttonContainer.appendChild(button);
+            )
+            buttonContainer.appendChild(A);
         }
     }
 
@@ -99,14 +118,16 @@
         const buttonContainer = document.querySelector('#app > div.main-container > main > div > section.side');
 
         if (buttonContainer) {
-            const button = createButton(
+            const A = createA(
                 'Goto lglg',
-                function() {
-                    window.location.href = `https://www.lglg.top/judgement`;
-                },
-                '' // 默认无额外样式
-            );
-            buttonContainer.appendChild(button);
+                `https://www.lglg.top/judgement`,
+                "",
+                {
+                    "data-v-0640126c":"",
+                    "data-v-59a020e0":"",
+                }
+            )
+            buttonContainer.appendChild(A);
         }
     }
     },delay)
